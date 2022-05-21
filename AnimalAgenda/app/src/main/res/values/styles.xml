@@ -1,2 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <!--Definizione dello stile per le etichette dei giorni della settimana del calendario-->
+    <style name="StileEtichetteGiorniSettimana" parent="TextAppearance.MaterialCalendarWidget.WeekDay">
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <!--Definizione dello stile per i giorni del calendario-->
+    <style name="StileGiorniCalendario" parent="TextAppearance.MaterialCalendarWidget.Date">
+        <item name="android:textSize">@dimen/font_body1</item>
+    </style>
+
+    <!--Definizione dello stile per il giorno corrente-->
+    <style name="StileGiornoCorrente" parent="StileGiorniCalendario">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/giorno_corrente_text_color</item>
+    </style>
+</resources>

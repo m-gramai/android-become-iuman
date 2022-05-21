@@ -1,3 +1,15 @@
 <resources>
+    <!--Definizione del nome dell'applicazione-->
     <string name="app_name">AnimalAgenda</string>
+
+    <!--Definizione delle etichette dei giorni della settimana del calendario-->
+    <string-array name="label_giorni_settimana">
+        <item>l</item>
+        <item>m</item>
+        <item>m</item>
+        <item>g</item>
+        <item>v</item>
+        <item>s</item>
+        <item>d</item>
+    </string-array>
 </resources>

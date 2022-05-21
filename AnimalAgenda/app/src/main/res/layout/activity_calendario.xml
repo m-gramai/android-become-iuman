@@ -10,7 +10,12 @@
 
     <!--Calendario-->
     <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:id="@+id/mcvCalendario"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        app:mcv_tileHeight="@dimen/altezza_calendario"
+        app:mcv_showOtherDates="other_months"
+        app:mcv_weekDayTextAppearance="@style/StileEtichetteGiorniSettimana"
+        app:mcv_dateTextAppearance="@style/StileGiorniCalendario" />
 
 </LinearLayout>
