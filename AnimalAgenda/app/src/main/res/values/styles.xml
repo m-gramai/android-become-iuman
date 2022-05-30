@@ -15,4 +15,14 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/giorno_corrente_text_color</item>
     </style>
+
+    <!--Definizione del tema per il bottom sheet dei dettagli del luogo-->
+    <style name="TemaDettagliLuogo" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/StileDettagliLuogo</item>
+    </style>
+
+    <!--Definizione dello stile per il bottom sheet dei dettagli del luogo-->
+    <style name="StileDettagliLuogo" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_dettagli_luogo</item>
+    </style>
 </resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<veterinari>
+    <!--
+    Sintassi elementi
+    <luogo>
+        <latitudine></latitudine>
+        <longitudine></longitudine>
+        <indirizzo></indirizzo>
+        <nome></nome>
+        <telefono></telefono>
+        <email></email>
+        <sito></sito>
+    </luogo>
+    -->
+</veterinari>

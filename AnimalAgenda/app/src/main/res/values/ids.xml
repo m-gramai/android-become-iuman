@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Identificativo per la mappa-->
+    <item type="id" name="osmvMappa" />
+    <!--Identificativo per la casella di ricerca-->
+    <item type="id" name="etRicercaLuogo" />
+</resources>

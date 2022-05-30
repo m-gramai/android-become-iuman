@@ -6,6 +6,9 @@
     <!--Definizione della dimensione dei margini della pagina-->
     <dimen name="margine_pagina">16dp</dimen>
 
+    <!--Definizione della dimensione dei margini del bottom sheet-->
+    <dimen name="margine_bottom_sheet">8dp</dimen>
+
     <!--Definizione della dimensione dell'altezza del calendario-->
     <dimen name="altezza_calendario">42dp</dimen>
 </resources>

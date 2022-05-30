@@ -12,4 +12,10 @@
         <item>s</item>
         <item>d</item>
     </string-array>
+
+    <!--Definizione dei suggerimenti per la casella di ricerca della mappa-->
+    <string name="hint_ricerca_luogo">Cerca</string>
+
+    <!--Definizione del testo del pulsante per la conferma della selezione-->
+    <string name="action_selezione">Seleziona</string>
 </resources>

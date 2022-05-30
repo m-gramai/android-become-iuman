@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SelezioneLuogoActivity">
+
+    <!--Mappa-->
+    <org.osmdroid.views.MapView
+        android:id="@id/osmvMappa"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--Layout per contenere la casella di ricerca-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/margine_pagina"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <!--Casella di ricerca del luogo-->
+        <EditText
+            android:id="@id/etRicercaLuogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPostalAddress"
+            android:importantForAutofill="no"
+            android:focusableInTouchMode="true"
+            android:hint="@string/hint_ricerca_luogo" />
+
+    </LinearLayout>
+
+</RelativeLayout>
