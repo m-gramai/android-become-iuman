@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/margine_bottom_sheet"
+    android:paddingBottom="@dimen/margine_bottom_sheet"
+    android:descendantFocusability="blocksDescendants">
+
+    <!--Area di testo per mostrare l'informazione associata al luogo-->
+    <TextView
+        android:id="@+id/tvbsInformazione"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.MaterialComponents.Body1" />
+
+</LinearLayout>

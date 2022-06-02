@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Definizione della struttura dei file XML che dovranno contenere i dati sui luoghi-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://animalagenda.example.com/luoghi"
+    xmlns="http://animalagenda.example.com/luoghi"
+    elementFormDefault="qualified">
+    
+    <!--Definizione dell'elemento alla radice-->
+    <xs:element name="luoghi">
+        <xs:complexType>
+            <xs:sequence>
+                <!--Definizione dell'elemento per i dati del singolo luogo-->
+                <xs:element name="luogo" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <!--Definizione dei sotto-elementi per i dati del luogo-->
+                            <xs:element name="latitudine" type="xs:decimal" />
+                            <xs:element name="longitudine" type="xs:decimal" />
+                            <xs:element name="indirizzo" type="xs:string" minOccurs="0" />
+                            <xs:element name="nome" type="xs:string" minOccurs="0" />
+                            <xs:element name="telefono" type="xs:string" minOccurs="0" />
+                            <xs:element name="email" type="xs:string" minOccurs="0" />
+                            <xs:element name="sito_internet" type="xs:string" minOccurs="0" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <!--Layout per contenere la casella di ricerca-->
+    <!--Layout per contenere la ricerca-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,6 +27,7 @@
             android:id="@id/etRicercaLuogo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:imeOptions="actionSearch"
             android:inputType="textPostalAddress"
             android:importantForAutofill="no"
             android:focusableInTouchMode="true"

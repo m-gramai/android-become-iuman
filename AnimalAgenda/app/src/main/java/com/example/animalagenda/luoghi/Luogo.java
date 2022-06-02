@@ -2,9 +2,11 @@ package com.example.animalagenda.luoghi; //Viene definito il package per le clas
 
 /*Vengono importate le classi ausiliarie Java*/
 import java.io.Serializable; //Viene importata l'interfaccia per rendere l'oggetto Serializable
+import java.util.ArrayList;  //Viene importata la classe per la struttura dati ArrayList
 
 /*Vengono importate le classi di Android*/
 import androidx.annotation.NonNull; //Viene importata la classe per l'annotazione degli oggetti che non possono essere nulli
+import android.location.Address;    //Viene importata la classe per gli indirizzi geografici
 
 /*Vengono importate le classi per la gestione della vista della mappa*/
 import org.osmdroid.util.GeoPoint; //Viene importata la classe per i punti geografici
@@ -50,7 +52,7 @@ public class Luogo implements Serializable {
      * @return Viene restituito un oggetto di tipo GeoPoint contenente le coordinate del luogo.
      */
     public GeoPoint getCoordinate() {
-        return coordinate; //Viene restituito il valore della proprietà
+        return this.coordinate; //Viene restituito il valore della proprietà
     }
 
     /**
@@ -58,7 +60,7 @@ public class Luogo implements Serializable {
      * @return Viene restituita una stringa rappresentante l'indirizzo.
      */
     public String getIndirizzo() {
-        return indirizzo; //Viene restituito il valore della proprietà
+        return this.indirizzo; //Viene restituito il valore della proprietà
     }
 
     /**
@@ -66,7 +68,7 @@ public class Luogo implements Serializable {
      * @return Viene restituita una stringa rappresentante il nome.
      */
     public String getNome() {
-        return nome; //Viene restituito il valore della proprietà
+        return this.nome; //Viene restituito il valore della proprietà
     }
 
     /**
@@ -74,7 +76,7 @@ public class Luogo implements Serializable {
      * @return Viene restituita una stringa rappresentante il numero di telefono.
      */
     public String getTelefono() {
-        return telefono; //Viene restituito il valore della proprietà
+        return this.telefono; //Viene restituito il valore della proprietà
     }
 
     /**
@@ -82,7 +84,7 @@ public class Luogo implements Serializable {
      * @return Viene restituita una stringa rappresentante l'indirizzo e-mail.
      */
     public String getEmail() {
-        return email; //Viene restituito il valore della proprietà
+        return this.email; //Viene restituito il valore della proprietà
     }
 
     /**
@@ -90,7 +92,7 @@ public class Luogo implements Serializable {
      * @return Viene restituita una stringa rappresentante il sito Internet.
      */
     public String getSitoInternet() {
-        return sitoInternet; //Viene restituito il valore della proprietà
+        return this.sitoInternet; //Viene restituito il valore della proprietà
     }
 
     /**
@@ -158,6 +160,119 @@ public class Luogo implements Serializable {
      * @return Restituisce true se entrambe le posizioni hanno coordinate uguali, false altrimenti.
      */
     public boolean comparaCoordinate(GeoPoint punto) {
-        return coordinate.equals(punto); //Viene restituito il risultato del controllo
+        return this.coordinate.equals(punto); //Viene restituito il risultato del controllo
+    }
+
+    /**
+     * Questo metodo si occupa di controllare se un dato testuale è valido.
+     * @param dato Stringa rappresentante il dato da controllare.
+     * @return Viene restituito false se la stringa è nulla, vuota o formata da soli spazi.
+     * Viene restituito true altrimenti.
+     */
+    private boolean datoTestualeValido(String dato) {
+        /*Si controlla che la stringa sia nulla, vuota o formata da soli spazi*/
+        return dato != null && !dato.isEmpty() && !dato.trim().isEmpty();
+    }
+
+    /**
+     * Questo metodo controlla la validità dell'indirizzo associato al luogo.
+     * @return Restituisce true se l'indirizzo è corretto, false altrimenti.
+     */
+    public boolean indirizzoValido() {
+        return datoTestualeValido(this.indirizzo); //Si restituisce il risultato del controllo
+    }
+
+    /**
+     * Questo metodo controlla la validità del nome associato al luogo.
+     * @return Restituisce true se il nome è corretto, false altrimenti.
+     */
+    public boolean nomeValido() {
+        return datoTestualeValido(this.nome); //Si restituisce il risultato del controllo
+    }
+
+    /**
+     * Questo metodo controlla la validità del numero di telefono associato al luogo.
+     * @return Restituisce true se il numero di telefono è corretto, false altrimenti.
+     */
+    public boolean telefonoValido() {
+        return datoTestualeValido(this.telefono); //Si restituisce il risultato del controllo
+    }
+
+    /**
+     * Questo metodo controlla la validità dell'indirizzo e-mail associato al luogo.
+     * @return Restituisce true se l'indirizzo e-mail è corretto, false altrimenti.
+     */
+    public boolean emailValida() {
+        return datoTestualeValido(this.email); //Si restituisce il risultato del controllo
+    }
+
+    /**
+     * Questo metodo controlla la validità del sito Internet associato al luogo.
+     * @return Restituisce true se il sito Internet è corretto, false altrimenti.
+     */
+    public boolean sitoInternetValido() {
+        return datoTestualeValido(this.sitoInternet); //Si restituisce il risultato del controllo
+    }
+
+    /**
+     * Questo metodo crea una lista di dati che può essere utilizzata durante la stampa per l'utente.
+     * Questa lista non comprende il nome del luogo e le coordinate geografiche.
+     * @return Viene restituita una struttura dati di tipo ArrayList contenente i dati non vuoti
+     * del luogo.
+     */
+    public ArrayList<DatoLuogo> listaDati() {
+        /*Dichiarazione e inizializzazione della lista di dati da restituire*/
+        ArrayList<DatoLuogo> lista = new ArrayList<>();
+
+        if (indirizzoValido()) //Controllo della validità del dato
+            /*L'indirizzo associato al luogo viene aggiunto alla lista di dati*/
+            lista.add(new DatoLuogo(this.indirizzo, TipoDatoLuogo.INDIRIZZO));
+
+        if (telefonoValido()) //Controllo della validità del dato
+            /*Il numero di telefono associato al luogo viene aggiunto alla lista di dati*/
+            lista.add(new DatoLuogo(this.telefono, TipoDatoLuogo.TELEFONO));
+
+        if (emailValida()) //Controllo della validità del dato
+            /*L'indirizzo e-mail associato al luogo viene aggiunto alla lista di dati*/
+            lista.add(new DatoLuogo(this.email, TipoDatoLuogo.EMAIL));
+
+        if (sitoInternetValido()) //Controllo della validità del dato
+            /*Il sito Internet associato al luogo viene aggiunto alla lista di dati*/
+            lista.add(new DatoLuogo(this.sitoInternet, TipoDatoLuogo.SITO_INTERNET));
+
+        return lista; //Viene restituita una lista di soli dati non vuoti
+    }
+
+    /**
+     * Questo metodo si occupa della costruzione dell'indirizzo a partire dai dati geografici grezzi.
+     * @param datiMappa Dati geografici ottenuti dalle API.
+     * @return Se valido, viene restituito un indirizzo coerente con quelli utilizzati nella
+     * simulazione; altrimenti viene restituito un oggetto nullo.
+     */
+    public static String creazioneIndirizzo(Address datiMappa) {
+        /*Dichiarazione e inizializzazione dell'oggetto ausiliario per la composizione
+          dell'indirizzo*/
+        String tmp = datiMappa == null ? null : datiMappa.getThoroughfare();
+
+        String indirizzo = null; //Dichiarazione e inizializzazione dell'indirizzo da restituire
+
+        if (tmp != null) {   //Si controlla la validità dell'indirizzo
+            indirizzo = tmp; //Si costruisce la prima parte dell'indirizzo, corrispondente alla via
+
+            tmp = datiMappa.getSubThoroughfare();   //Si recupera il numero della via
+            if (tmp != null)                        //Si controlla la validità
+                indirizzo = indirizzo + ", " + tmp; //Si costruisce la seconda parte
+
+            tmp = datiMappa.getLocality();                    //Si recupera la città
+            if (tmp != null)                                  //Si controlla la validità
+                indirizzo = indirizzo + " (" + tmp + ")";     //Si costruisce la terza parte
+            else {                                            //Si usa il codice postale in alternativa
+                tmp = datiMappa.getPostalCode();              //Si recupera il codice postale
+                if (tmp != null)                              //Si controlla la validità
+                    indirizzo = indirizzo + " (" + tmp + ")"; //Si costruisce la terza parte
+            }
+        }
+
+        return indirizzo; //Viene restituito il metodo creato
     }
 }
