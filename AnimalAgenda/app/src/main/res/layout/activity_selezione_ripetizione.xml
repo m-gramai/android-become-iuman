@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="2"
+    tools:context=".SelezioneRipetizioneActivity">
+
+    <!--Vista per lo scorrimento del contenuto della pagina-->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ottimale"
+        android:layout_weight="2"
+        android:fillViewport="true">
+
+        <!--Layout per contenere le opzioni di ripetizione-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--Lista delle opzioni di ripetizione dell'evento. È possibile selezionare solo
+                un'opzione alla volta-->
+            <RadioGroup
+                android:id="@id/rbgOpzioniRipetizione"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:checkedButton="@id/rbNessunaRipetizione">
+
+                <!--Opzione per disabilitare la ripetizione dell'evento-->
+                <RadioButton
+                    android:id="@id/rbNessunaRipetizione"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_nessuna_ripetizione" />
+
+                <!--Opzione per la ripetizione mensile dell'evento-->
+                <RadioButton
+                    android:id="@id/rbRipetizioneMensile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_ripetizione_mensile" />
+
+                <!--Opzione per la ripetizione settimanale dell'evento-->
+                <RadioButton
+                    android:id="@id/rbRipetizioneSettimanale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_ripetizione_settimanale" />
+
+            </RadioGroup>
+
+            <!--Disposizione tabellare delle opzioni di ripetizione giornaliera-->
+            <com.example.animalagenda.view.ripetizione.OpzioniRipetizioneGiornaliera
+                android:id="@id/gvOpzioniRipetizioneGiornaliera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:numColumns="4"
+                android:stretchMode="columnWidth"
+                android:listSelector="@android:color/transparent" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!--Layout per contenere il pulsante di conferma della modifica-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0">
+
+        <!--Pulsante per la conferma della selezione delle opzioni di ripetizione-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/action_selezione" />
+
+    </FrameLayout>
+
+</LinearLayout>

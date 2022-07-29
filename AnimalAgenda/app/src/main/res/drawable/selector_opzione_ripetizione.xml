@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--Definizione della forma per l'opzione non ancora selezionata-->
+    <item
+        android:state_checked="false"
+        android:state_pressed="false"
+        android:drawable="@drawable/tb_opzione_ripetizione_off" />
+
+    <!--Definizione della forma mentre si tiene premuta l'opzione non selezionata-->
+    <item
+        android:state_checked="false"
+        android:state_pressed="true"
+        android:drawable="@drawable/tb_opzione_ripetizione_off" />
+
+    <!--Definizione della forma per l'opzione selezionata-->
+    <item
+        android:state_checked="true"
+        android:state_pressed="false"
+        android:drawable="@drawable/tb_opzione_ripetizione_on" />
+
+    <!--Definizione della forma mentre si tiene premuta l'opzione selezionata-->
+    <item
+        android:state_checked="true"
+        android:state_pressed="true"
+        android:drawable="@drawable/tb_opzione_ripetizione_on" />
+
+</selector>

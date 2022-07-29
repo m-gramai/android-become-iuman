@@ -13,6 +13,11 @@
         <item>d</item>
     </string-array>
 
+    <!--Definizione delle etichette per le opzioni di ripetizione dell'evento-->
+    <string name="label_nessuna_ripetizione">Mai</string>
+    <string name="label_ripetizione_mensile">Ogni mese</string>
+    <string name="label_ripetizione_settimanale">Ogni settimana</string>
+
     <!--Definizione dei suggerimenti per la casella di ricerca della mappa-->
     <string name="hint_ricerca_luogo">Cerca</string>
 

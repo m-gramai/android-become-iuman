@@ -25,4 +25,14 @@
     <style name="StileDettagliLuogo" parent="Widget.Design.BottomSheet.Modal">
         <item name="android:background">@drawable/bg_dettagli_luogo</item>
     </style>
+
+    <!--Definizione del tema per i toggle button delle opzioni di ripetizione-->
+    <style name="TemaOpzioneRipetizione" parent="Theme.AppCompat.Light">
+        <item name="android:buttonStyleToggle">@style/StileOpzioneRipetizione</item>
+    </style>
+
+    <!--Definizione dello stile per i toggle button delle opzioni di ripetizione-->
+    <style name="StileOpzioneRipetizione" parent="android:Widget.Button.Toggle">
+        <item name="android:background">@drawable/selector_opzione_ripetizione</item>
+    </style>
 </resources>

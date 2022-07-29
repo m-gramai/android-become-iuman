@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--Dimensione nulla per l'ottimizzazione delle prestazioni durante il calcolo automatico delle
+        dimensioni delle viste-->
+    <dimen name="ottimale">0dp</dimen>
+
     <!--Definizione delle dimensioni dei font-->
     <dimen name="font_body1">16sp</dimen>
 

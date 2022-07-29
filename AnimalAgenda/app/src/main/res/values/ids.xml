@@ -4,4 +4,17 @@
     <item type="id" name="osmvMappa" />
     <!--Identificativo per la casella di ricerca-->
     <item type="id" name="etRicercaLuogo" />
+
+    <!--Identificativo per la lista delle opzioni per la selezione della ripetizione settimanale-->
+    <item type="id" name="rbgOpzioniRipetizione" />
+    <!--Identificativo per l'opzione che disabilita la ripetizione dell'evento-->
+    <item type="id" name="rbNessunaRipetizione" />
+    <!--Identificativo per l'opzione di ripetizione mensile-->
+    <item type="id" name="rbRipetizioneMensile" />
+    <!--Identificativo per l'opzione di ripetizione settimanale-->
+    <item type="id" name="rbRipetizioneSettimanale" />
+    <!--Identificativo per la griglia delle opzioni per la selezione della ripetizione giornaliera-->
+    <item type="id" name="gvOpzioniRipetizioneGiornaliera" />
+    <!--Identificativo per il toggle button della scelta della ripetizione giornaliera-->
+    <item type="id" name="tbOpzioneGiornoSettimana" />
 </resources>
