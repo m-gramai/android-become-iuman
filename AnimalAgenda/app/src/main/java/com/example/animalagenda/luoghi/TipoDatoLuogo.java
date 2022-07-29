@@ -10,5 +10,5 @@ public enum TipoDatoLuogo {
     NOME,
     TELEFONO,
     EMAIL,
-    SITO_INTERNET;
+    SITO_INTERNET
 }

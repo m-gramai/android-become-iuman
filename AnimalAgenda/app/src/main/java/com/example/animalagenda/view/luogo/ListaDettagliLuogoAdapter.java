@@ -14,6 +14,7 @@ import android.view.ViewGroup;       //Viene importata la classe per la manipola
 import android.app.Activity;         //Viene importata la classe per la manipolazione delle informazioni dell'activity
 import android.widget.TextView;      //Viene importata la classe per la manipolazione delle aree di testo
 
+/*Vengono importate le classi di gestione generale dell'applicazione*/
 import com.example.animalagenda.R;                //Viene importata la classe per la gestione delle risorse
 import com.example.animalagenda.luoghi.DatoLuogo; //Viene importata la classe ausiliaria per i dati del luogo
 
@@ -28,7 +29,7 @@ public class ListaDettagliLuogoAdapter extends ArrayAdapter<DatoLuogo> {
     /*Definizione costruttore*/
 
     /**
-     * Costruttore per creare un nuovo Adapter per la lista di utenti da stampare.
+     * Costruttore per creare un nuovo Adapter per la lista delle informazioni da stampare.
      * @param context  Oggetto di tipo Context contenente le informazioni sull'activity.
      * @param resource Intero rappresentante l'identificativo della risorsa per la creazione degli
      *                 elementi della vista.
@@ -63,7 +64,8 @@ public class ListaDettagliLuogoAdapter extends ArrayAdapter<DatoLuogo> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        if (convertView == null) { //Si verifica che la vista in ingresso non sia già valida
+        /*Si verifica che la vista in ingresso non sia già valida*/
+        if (convertView == null) {
             /*Si inizializza la vista in ingresso con una valida*/
             convertView = ((Activity) getContext()).getLayoutInflater().inflate(
                     R.layout.item_list_bottom_sheet_dettagli_luogo,

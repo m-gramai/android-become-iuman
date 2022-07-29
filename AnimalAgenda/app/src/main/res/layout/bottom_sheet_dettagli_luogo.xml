@@ -4,56 +4,55 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingTop="@dimen/margine_bottom_sheet"
-    android:paddingRight="@dimen/margine_pagina"
-    android:paddingBottom="@dimen/margine_bottom_sheet"
-    android:paddingLeft="@dimen/margine_pagina"
     app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
     <!--Maniglia del bottom sheet-->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margine_pagina_stretto"
+        android:paddingRight="@dimen/margine_pagina_normale"
+        android:paddingBottom="@dimen/margine_pagina_stretto"
+        android:paddingLeft="@dimen/margine_pagina_normale"
         android:src="@drawable/ic_bottom_sheet_maniglia" />
-
-    <!--Separatore vuoto orizzontale-->
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/margine_bottom_sheet" />
 
     <!--Area di testo per il nome del luogo-->
     <TextView
-        android:id="@+id/tvbsTitolo"
-        android:layout_width="wrap_content"
+        android:id="@id/tvbsTitolo"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="@dimen/margine_pagina_normale"
         android:visibility="gone"
         style="@style/TextAppearance.MaterialComponents.Headline5" />
 
-    <!--Separatore vuoto orizzontale-->
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/margine_bottom_sheet" />
-
     <!--Lista per dettagli del luogo-->
     <com.example.animalagenda.view.luogo.ListaDettagliLuogo
-        android:id="@+id/lvbsListaInformazioni"
+        android:id="@id/lvbsListaInformazioni"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margine_pagina_stretto"
+        android:paddingBottom="@dimen/margine_pagina_stretto"
         android:listSelector="@android:color/transparent"
-        android:divider="@drawable/divider_list_bottom_sheet"
         android:footerDividersEnabled="true"
-        android:dividerHeight="1dp" />
+        android:divider="@drawable/divider_list_bottom_sheet"
+        android:dividerHeight="@dimen/altezza_divisore_elementi_lista" />
 
-    <!--Separatore vuoto orizzontale-->
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/margine_bottom_sheet" />
-
-    <!--Pulsante per la conferma della selezione del luogo-->
-    <Button
+    <!--Layout per contenere il pulsante di conferma della modifica-->
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/action_selezione"
-        android:theme="@style/Theme.AnimalAgenda" />
+        android:paddingTop="@dimen/margine_pagina_stretto"
+        android:paddingRight="@dimen/margine_pagina_normale"
+        android:paddingBottom="@dimen/margine_pagina_stretto"
+        android:paddingLeft="@dimen/margine_pagina_normale">
+
+        <!--Pulsante per la conferma della selezione del luogo-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/action_selezione"
+            android:theme="@style/Theme.AnimalAgenda" />
+
+    </FrameLayout>
 
 </LinearLayout>

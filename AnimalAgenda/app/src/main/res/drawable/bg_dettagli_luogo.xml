@@ -6,6 +6,6 @@
 
     <!--Definizione dei bordi arrotondati-->
     <corners
-        android:topLeftRadius="@dimen/margine_pagina"
-        android:topRightRadius="@dimen/margine_pagina" />
+        android:topLeftRadius="@dimen/raggio_arrotondamento_vertice_pagina"
+        android:topRightRadius="@dimen/raggio_arrotondamento_vertice_pagina" />
 </shape>

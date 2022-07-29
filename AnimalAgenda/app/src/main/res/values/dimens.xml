@@ -7,12 +7,25 @@
     <!--Definizione delle dimensioni dei font-->
     <dimen name="font_body1">16sp</dimen>
 
-    <!--Definizione della dimensione dei margini della pagina-->
-    <dimen name="margine_pagina">16dp</dimen>
+    <!--Definizione delle dimensioni dei margini della pagina-->
+    <dimen name="margine_pagina_stretto">8dp</dimen>
+    <dimen name="margine_pagina_normale">16dp</dimen>
 
-    <!--Definizione della dimensione dei margini del bottom sheet-->
-    <dimen name="margine_bottom_sheet">8dp</dimen>
+    <!--Definizione del valore per ottenere le pagine dai vertici arrotondati-->
+    <dimen name="raggio_arrotondamento_vertice_pagina">16dp</dimen>
+
+    <!--Definizione dell'altezza dei divisori degli elementi delle liste-->
+    <dimen name="altezza_divisore_elementi_lista">1dp</dimen>
+
+    <!--Definizione delle dimensioni per le icone-->
+    <dimen name="max_dimensione_effettiva_icona">40dp</dimen>
+    <dimen name="altezza_maniglia_bottom_sheet">4dp</dimen>
+    <dimen name="raggio_arrotondamento_vertice_maniglia">100dp</dimen>
 
     <!--Definizione della dimensione dell'altezza del calendario-->
     <dimen name="altezza_calendario">42dp</dimen>
+
+    <!--Definizione delle dimensioni per la vista delle opzioni di ripetizione giornaliera-->
+    <dimen name="margine_opzioni_ripetizione_giornaliera">54dp</dimen>
+    <dimen name="max_dimensione_opzione_ripetizione_giornaliera">72dp</dimen>
 </resources>

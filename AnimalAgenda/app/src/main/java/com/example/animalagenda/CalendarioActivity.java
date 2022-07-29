@@ -10,6 +10,7 @@ import android.os.Bundle;                        //Viene importata la classe per
 /*Vengono importate le classi per la gestione della vista del calendario*/
 import com.prolificinteractive.materialcalendarview.MaterialCalendarView; //Viene importata la classe per il calendario
 import com.prolificinteractive.materialcalendarview.CalendarDay;          //Viene importata la classe per la gestione dei giorni
+import com.example.animalagenda.view.calendario.GiornoCorrenteDecorator;  //Viene importata la classe per il decoratore del giorno corrente
 
 /**
  * La classe gestisce l'activity che mostra gli eventi salvati sul calendario.

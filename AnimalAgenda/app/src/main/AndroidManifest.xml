@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AnimalAgenda">
-        <activity android:name=".SelezioneRipetizioneActivity"></activity>
+        <activity android:name=".SelezioneRipetizioneActivity" />
         <activity android:name=".SelezioneLuogoActivity" />
         <activity android:name=".CalendarioActivity" />
         <activity android:name=".MainActivity">

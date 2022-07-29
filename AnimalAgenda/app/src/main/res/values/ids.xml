@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--Identificativo per il calendario-->
+    <item type="id" name="mcvCalendario" />
+
     <!--Identificativo per la mappa-->
     <item type="id" name="osmvMappa" />
     <!--Identificativo per la casella di ricerca-->
     <item type="id" name="etRicercaLuogo" />
+
+    <!--Identificativo per il titolo del bottom sheet contenente i dettagli del luogo-->
+    <item type="id" name="tvbsTitolo" />
+    <!--Identificativo per la lista contenente le informazioni di riepilogo sul luogo visualizzato-->
+    <item type="id" name="lvbsListaInformazioni" />
+    <!--Identificativo della casella di testo per i dettagli sul luogo visualizzato-->
+    <item type="id" name="tvbsInformazione" />
 
     <!--Identificativo per la lista delle opzioni per la selezione della ripetizione settimanale-->
     <item type="id" name="rbgOpzioniRipetizione" />

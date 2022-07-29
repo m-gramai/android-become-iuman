@@ -3,6 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:maxWidth="@dimen/max_dimensione_opzione_ripetizione_giornaliera"
+    android:padding="@dimen/margine_pagina_stretto"
     android:descendantFocusability="blocksDescendants">
 
     <!--Toggle button per la singola opzione di ripetizione giornaliera-->

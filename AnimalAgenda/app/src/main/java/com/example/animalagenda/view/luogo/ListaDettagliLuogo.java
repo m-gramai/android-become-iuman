@@ -11,6 +11,7 @@ import android.view.ViewGroup;    //Viene importata la classe per le dimensioni 
  * selezione del luogo nel bottom sheet.
  */
 public class ListaDettagliLuogo extends ListView {
+
     /*Definizione costruttori*/
 
     /**

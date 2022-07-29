@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <inset xmlns:android="http://schemas.android.com/apk/res/android"
-    android:insetLeft="24dp">
+    android:insetRight="@dimen/margine_pagina_normale">
 
     <!--Definizione della forma-->
     <shape android:shape="rectangle">

@@ -4,8 +4,8 @@
 
     <!--Definizione delle dimensioni-->
     <size
-        android:width="36dp"
-        android:height="5dp" />
+        android:width="@dimen/max_dimensione_effettiva_icona"
+        android:height="@dimen/altezza_maniglia_bottom_sheet" />
 
     <!--Definizione del colore-->
     <solid
@@ -13,6 +13,6 @@
 
     <!--Definizione dei bordi arrotondati-->
     <corners
-        android:radius="100dp" />
+        android:radius="@dimen/raggio_arrotondamento_vertice_maniglia" />
 
 </shape>

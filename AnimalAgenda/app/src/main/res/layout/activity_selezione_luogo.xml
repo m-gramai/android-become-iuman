@@ -1,26 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:weightSum="2"
     tools:context=".SelezioneLuogoActivity">
 
-    <!--Mappa-->
-    <org.osmdroid.views.MapView
-        android:id="@id/osmvMappa"
+    <!--Layout per contenere la mappa-->
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="@dimen/ottimale"
+        android:layout_weight="2">
+
+        <!--Mappa-->
+        <org.osmdroid.views.MapView
+            android:id="@id/osmvMappa"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
 
     <!--Layout per contenere la ricerca-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="@dimen/margine_pagina"
-        android:layout_alignParentBottom="true"
-        android:background="@color/white">
+        android:layout_weight="0"
+        android:paddingTop="@dimen/margine_pagina_stretto"
+        android:paddingRight="@dimen/margine_pagina_normale"
+        android:paddingBottom="@dimen/margine_pagina_stretto"
+        android:paddingLeft="@dimen/margine_pagina_normale">
 
         <!--Casella di ricerca del luogo-->
         <EditText
@@ -35,4 +46,4 @@
 
     </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>

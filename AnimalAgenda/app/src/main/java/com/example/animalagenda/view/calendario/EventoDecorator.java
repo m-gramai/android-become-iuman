@@ -1,4 +1,4 @@
-package com.example.animalagenda; //Viene definito il package per le classi dell'applicazione
+package com.example.animalagenda.view.calendario; //Viene definito il package per le classi dell'applicazione
 
 /*Vengono importate le classi ausiliarie Java*/
 import java.util.Collection; //Viene importata la classe per la manipolazione delle strutture dati Collection
@@ -6,6 +6,9 @@ import java.util.HashSet;    //Viene importata la classe per la manipolazione de
 
 /*Vengono importate le classi di Android*/
 import android.content.res.Resources; //Viene importata la classe per la gestione dei file necessari al funzionamento dell'applicazione
+
+/*Vengono importate le classi di gestione generale dell'applicazione*/
+import com.example.animalagenda.R; //Viene importata la classe per la gestione delle risorse
 
 /*Vengono importate le classi per la gestione della vista del calendario*/
 import com.prolificinteractive.materialcalendarview.DayViewDecorator; //Viene importata l'interfaccia per le modifiche grafiche
@@ -21,8 +24,7 @@ public class EventoDecorator implements DayViewDecorator {
     /*Definizione delle costanti*/
     private final static float raggioSimbolo = 3.5f; //Raggio del cerchio sotto ai giorni che contengono eventi
     private final int colore;                        //Colore da assegnare al simbolo che indica gli eventi
-
-    private final HashSet<CalendarDay> dateEventi; //Tabella hash per contenere le date in cui sono presenti eventi
+    private final HashSet<CalendarDay> dateEventi;   //Tabella hash per contenere le date in cui sono presenti eventi
 
     /*Definizione del costruttore*/
 

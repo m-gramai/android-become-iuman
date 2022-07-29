@@ -3,13 +3,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    android:paddingTop="@dimen/margine_bottom_sheet"
-    android:paddingBottom="@dimen/margine_bottom_sheet"
+    android:paddingTop="@dimen/margine_pagina_stretto"
+    android:paddingRight="@dimen/margine_pagina_normale"
+    android:paddingBottom="@dimen/margine_pagina_stretto"
+    android:paddingLeft="@dimen/margine_pagina_normale"
     android:descendantFocusability="blocksDescendants">
+
+    <!--Separatore vuoto verticale-->
+    <Space
+        android:layout_width="@dimen/margine_pagina_normale"
+        android:layout_height="match_parent" />
 
     <!--Area di testo per mostrare l'informazione associata al luogo-->
     <TextView
-        android:id="@+id/tvbsInformazione"
+        android:id="@id/tvbsInformazione"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/TextAppearance.MaterialComponents.Body1" />

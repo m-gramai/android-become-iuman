@@ -28,6 +28,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:paddingTop="@dimen/margine_pagina_stretto"
+                android:paddingRight="@dimen/margine_pagina_normale"
+                android:paddingBottom="@dimen/margine_pagina_stretto"
+                android:paddingLeft="@dimen/margine_pagina_normale"
                 android:checkedButton="@id/rbNessunaRipetizione">
 
                 <!--Opzione per disabilitare la ripetizione dell'evento-->
@@ -35,6 +39,7 @@
                     android:id="@id/rbNessunaRipetizione"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:padding="@dimen/margine_pagina_normale"
                     android:text="@string/label_nessuna_ripetizione" />
 
                 <!--Opzione per la ripetizione mensile dell'evento-->
@@ -42,6 +47,7 @@
                     android:id="@id/rbRipetizioneMensile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:padding="@dimen/margine_pagina_normale"
                     android:text="@string/label_ripetizione_mensile" />
 
                 <!--Opzione per la ripetizione settimanale dell'evento-->
@@ -49,6 +55,7 @@
                     android:id="@id/rbRipetizioneSettimanale"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:padding="@dimen/margine_pagina_normale"
                     android:text="@string/label_ripetizione_settimanale" />
 
             </RadioGroup>
@@ -59,6 +66,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:paddingRight="@dimen/margine_opzioni_ripetizione_giornaliera"
+                android:paddingBottom="@dimen/margine_pagina_stretto"
+                android:paddingLeft="@dimen/margine_opzioni_ripetizione_giornaliera"
                 android:numColumns="4"
                 android:stretchMode="columnWidth"
                 android:listSelector="@android:color/transparent" />
@@ -71,7 +81,11 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0">
+        android:layout_weight="0"
+        android:paddingTop="@dimen/margine_pagina_stretto"
+        android:paddingRight="@dimen/margine_pagina_normale"
+        android:paddingBottom="@dimen/margine_pagina_stretto"
+        android:paddingLeft="@dimen/margine_pagina_normale">
 
         <!--Pulsante per la conferma della selezione delle opzioni di ripetizione-->
         <Button

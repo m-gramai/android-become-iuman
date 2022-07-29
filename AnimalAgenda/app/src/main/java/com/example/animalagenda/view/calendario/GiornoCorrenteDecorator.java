@@ -1,8 +1,11 @@
-package com.example.animalagenda; //Viene definito il package per le classi dell'applicazione
+package com.example.animalagenda.view.calendario; //Viene definito il package per le classi dell'applicazione
 
 /*Vengono importate le classi di Android*/
 import android.content.Context;               //Viene importata la classe per il contesto di esecuzione
 import android.text.style.TextAppearanceSpan; //Viene importata la classe per la formattazione del testo
+
+/*Vengono importate le classi di gestione generale dell'applicazione*/
+import com.example.animalagenda.R; //Viene importata la classe per la gestione delle risorse
 
 /*Vengono importate le classi per la gestione della vista del calendario*/
 import com.prolificinteractive.materialcalendarview.DayViewDecorator; //Viene importata l'interfaccia per le modifiche grafiche

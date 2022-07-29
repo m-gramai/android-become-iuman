@@ -433,7 +433,7 @@ public class SelezioneLuogoActivity extends AppCompatActivity implements MapEven
         /*Si controlla la validità dei riferimenti e quella delle informazioni*/
         if (tvbsTitolo != null && lvbsListaInformazioni != null && informazioniValide) {
             /*Dichiarazione e inizializzazione dell'oggetto che si occupa di creare la lista delle
-          informazioni associate al luogo*/
+              informazioni associate al luogo*/
             ListaDettagliLuogoAdapter creatoreListaDettagli = new ListaDettagliLuogoAdapter(
                     this,
                     R.id.lvbsListaInformazioni,
